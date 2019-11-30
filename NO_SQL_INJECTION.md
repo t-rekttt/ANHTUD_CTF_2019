@@ -260,7 +260,7 @@ Nghĩ tí là ra ngay payload `....//users/admin` thôi. Các bạn xem đoạn 
 ![][test-code]
 
 <details>
-  <summary>Source code</summary> 
+  <summary>Test code</summary> 
   
   ```php
   <?php
