@@ -11,6 +11,7 @@ Challenge Oreo sẽ được mở khi bạn giải được bài này
 ```
 
 ### Giao diện của bài:
+![][view]
 
 ### Lời giải
 Tạo 1 tài khoản, đăng nhập thử:
@@ -47,3 +48,5 @@ Nghĩ tí là ra ngay payload `....//users/admin` thôi. Các bạn xem đoạn 
 
 Flag:
 > flag{you_cant_have_sql_injection_if_you_dont_use_sql}
+
+[view]: assets/NO_SQL_INJECTION/view.png
