@@ -11,6 +11,7 @@ Challenge Oreo sẽ được mở khi bạn giải được bài này
 ```
 
 ### Giao diện của bài:
+
 ![][view]
 
 ### Lời giải
@@ -28,7 +29,7 @@ Ok, vậy chắc mục tiêu chính của bài này là làm sao vào được a
 Thấy trong bài có source nên mình nghía thử luôn:
 
 <details>
-  <summary></summary>
+  <summary>Source code</summary>
   <p>
     ```php
     <?php
@@ -257,6 +258,8 @@ Trong khi đọc hiểu và phân tích tính năng thì mình thấy trong sour
 Từ đó mình nghĩ ra cách làm bài này là làm sao dùng tính năng đăng ký và path traversal để ghi đè password của mình lên password của admin. Sau đó đăng nhập vào lấy flag.
 Nghĩ tí là ra ngay payload `....//users/admin` thôi. Các bạn xem đoạn test này của mình cho dễ hiểu
 
+![][test-code]
+
 Flag:
 ```
 flag{you_cant_have_sql_injection_if_you_dont_use_sql}
@@ -264,3 +267,4 @@ flag{you_cant_have_sql_injection_if_you_dont_use_sql}
 
 [view]: assets/NO_SQL_INJECTION/view.png
 [logged-in]: assets/NO_SQL_INJECTION/logged-in.png
+[test-code]: assets/NO_SQL_INJECTION/test-code.png
