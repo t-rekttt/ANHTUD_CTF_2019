@@ -253,7 +253,9 @@ Từ đó mình nghĩ ra cách làm bài này là làm sao dùng tính năng đ�
 Nghĩ tí là ra ngay payload `....//users/admin` thôi. Các bạn xem đoạn test này của mình cho dễ hiểu
 
 Flag:
-> flag{you_cant_have_sql_injection_if_you_dont_use_sql}
+```
+flag{you_cant_have_sql_injection_if_you_dont_use_sql}
+```
 
 [view]: assets/NO_SQL_INJECTION/view.png
 [logged-in]: assets/NO_SQL_INJECTION/logged-in.png
