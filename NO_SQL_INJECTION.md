@@ -15,8 +15,10 @@ Challenge Oreo sẽ được mở khi bạn giải được bài này
 ### Lời giải
 Tạo 1 tài khoản, đăng nhập thử:
 
-> Bạn có biết khác biệt giữa bạn và admin là gì không?
-> Là admin thì có flag, còn bạn thì không. Ha ha ha -_-
+```
+Bạn có biết khác biệt giữa bạn và admin là gì không?
+Là admin thì có flag, còn bạn thì không. Ha ha ha -_-
+```
 
 Ok, vậy chắc mục tiêu chính của bài này là làm sao vào được admin rồi. 
 
