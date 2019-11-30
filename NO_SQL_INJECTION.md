@@ -238,16 +238,16 @@ Thấy trong bài có source nên mình nghía thử luôn:
 
 Trông có vẻ tức mắt vì nhiều for với if quá, nhưng nếu bạn chịu khó đọc một chút thì sẽ thấy chỉ có đúng 2 phần tương ứng với 2 tính năng thôi. Sau đây là flow của các tính năng:
 
-+ Đăng ký
+**Đăng ký**
 1. Lấy username và password từ post data ($POST), loại bỏ các string `../`, `..\\` khỏi username
 2. Check xem tên tài khoản đã có trên hệ thống chưa (ở đây hệ thống dùng các thư mục có tên tương ứng với username trong path /users)
-3. Nếu tên tài khoản đã có thì trả về thông báo "Tên tài khoản đã được sử dụng.", không thì qua bước 4
+3. Nếu tên tài khoản đã có thì trả về thông báo `Tên tài khoản đã được sử dụng.`, không thì qua bước 4
 4. Nối username với đường dẫn tới thư mục /users ($base_dir) và parse lại bằng hàm `get_absolute_path` (hàm này có tác dụng format lại đường dẫn và xử lý relative path trong đường dẫn của bạn. Ví dụ `/path/abc/users/../` sẽ bị replace thành `/path/abc`, sau đó check lại xem có $base_dir trong đường dẫn vừa format không. Nếu không có $base_dir thì trả về "Tên tài khoản không hợp lệ.", có thì qua bước 5. Đoạn này chắc để chống injection để thoát ra khỏi thư mục /users.
 5. Tạo password file và ghi lên đó `md5($password)`. Gán session.
 
-+ Đăng nhập
+**Đăng nhập**
 1. Lấy $username và $password từ post data ($POST)
-2. Check xem tài khoản có hợp lệ không (giống bước 4 ở trên), nếu không thì trả về "Tên tài khoản không hợp lệ.", có thì qua bước 3
+2. Check xem tài khoản có hợp lệ không (giống bước 4 ở trên), nếu không thì trả về `Tên tài khoản không hợp lệ.`, có thì qua bước 3
 3. Lấy password hash từ password file tương ứng với username và check hash xem có giống md5($password) không. Nếu giống thì gán session, ngoài ra nếu là admin thì đổi password thành `md5($password . SECRET)`
 
 + Ngoài ra còn có phần logout tuy nhiên phần này chẳng có gì ngoài unset session nên mình không nói thêm
