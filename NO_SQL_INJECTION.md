@@ -1,17 +1,18 @@
 ## No SQL Injection
 ### 100 points
 
-Đề bài:
+Đây là bài đầu tiên mình làm trong kì CTF này. Sáng hôm thi mới biết là phải vào mạng công ty mới làm bài được, vì quá phấn khích nên mình đã bùng học chạy hộc bơ lên công ty để thi. Mở scoreboard lên nghĩ quái lạ, bài này 100 points, nằm đầu tiên trong list bài mà lại chưa ai động, nên mình quyết định làm luôn. Cảm giác là người giải được đầu tiên bao giờ nó cũng vui hơn :)).
+
+### Đề bài:
 > Trên đỉnh gò xưa
 
 > http://nosqlinjection.ctf2019.yeuchimse.com
 
 > Challenge Oreo sẽ được mở khi bạn giải được bài này
 
-Đây là bài đầu tiên mình làm trong kì CTF này. Sáng hôm thi mới biết là phải vào mạng công ty mới làm bài được, vì quá phấn khích nên mình đã bùng học chạy hộc bơ lên công ty để thi. Mở scoreboard lên nghĩ quái lạ, bài này 100 points, nằm đầu tiên trong list bài mà lại chưa ai động, nên mình quyết định làm luôn. Cảm giác là người giải được đầu tiên bao giờ nó cũng vui hơn :)).
+### Giao diện của bài:
 
-Giao diện của bài:
-
+### Lời giải
 Tạo 1 tài khoản, đăng nhập thử:
 
 > Bạn có biết khác biệt giữa bạn và admin là gì không?
