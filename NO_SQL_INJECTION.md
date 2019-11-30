@@ -5,9 +5,7 @@
 
 ### Đề bài:
 > Trên đỉnh gò xưa
-
 > http://nosqlinjection.ctf2019.yeuchimse.com
-
 > Challenge Oreo sẽ được mở khi bạn giải được bài này
 
 ### Giao diện của bài:
