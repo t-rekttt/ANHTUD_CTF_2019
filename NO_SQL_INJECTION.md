@@ -304,6 +304,7 @@ Nghĩ tí là ra ngay payload `....//users/admin` thôi. Các bạn xem đoạn 
 </details>
 
 Flag:
+![][flag]
 ```
 flag{you_cant_have_sql_injection_if_you_dont_use_sql}
 ```
@@ -311,3 +312,4 @@ flag{you_cant_have_sql_injection_if_you_dont_use_sql}
 [view]: assets/NO_SQL_INJECTION/view.png
 [logged-in]: assets/NO_SQL_INJECTION/logged-in.png
 [test-code]: assets/NO_SQL_INJECTION/test-code.png
+[flag]: assets/NO_SQL_INJECTION/flag.png
