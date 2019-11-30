@@ -214,7 +214,7 @@ Sửa lại đoạn code lúc nãy tí để in ra `session` và `hash`, sau khi
 
 ![][final-cookies]
 
-Flag:
+### Flag:
 ![][flag]
 
 ```
