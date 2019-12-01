@@ -4,11 +4,11 @@
 Đây là bài đầu tiên mình làm trong kì CTF này. Sáng hôm thi mới biết là phải vào mạng công ty mới làm bài được, vì quá phấn khích nên mình đã bùng học chạy hộc bơ lên công ty để thi. Mở scoreboard lên nghĩ quái lạ, bài này 100 points, nằm đầu tiên trong list bài mà lại chưa ai động, nên mình quyết định làm luôn. Cảm giác là người giải được đầu tiên bao giờ nó cũng vui hơn :)).
 
 ### Đề bài:
-```
+<pre>
 Trên đỉnh gò xưa
-http://nosqlinjection.ctf2019.yeuchimse.com
+<a href="http://nosqlinjection.ctf2019.yeuchimse.com">http://nosqlinjection.ctf2019.yeuchimse.com</a>
 Challenge Oreo sẽ được mở khi bạn giải được bài này
-```
+</pre>
 
 ### Giao diện của bài:
 
