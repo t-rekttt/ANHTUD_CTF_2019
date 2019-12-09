@@ -12,36 +12,36 @@ Không có nhiều điều để nói về bài này lắm :))
 
 ### Giao diện của bài:
 
-![][view-register]
+![view-register]
 
-![][view-login]
+![view-login]
 
 ### Lời giải
 Tạo 1 tài khoản, đăng nhập thử
 
-![][view-shop]
+![view-shop]
 
 Có vẻ như với bài này chúng ta sẽ phải đi shopping rồi. Để ý thấy balance của chúng ta có 60 củ.
 
 Nghía qua source tí, thấy nó tương ứng với dòng này trong file `RegisterController.php`. Mỗi user khi đăng ký đều được cấp 60 củ giống nhau.
 
-![][view-register-controller-src]
+![view-register-controller-src]
 
 Tuy nhiên flag thì tận 100 củ cơ, vậy 40 củ nữa chúng ta phải kiếm ở đâu?
 
 Thử tất tay con RTX 2080 này xem nào. Sau khi hết tiền và đòi mua cố, chúng ta nhận được một câu chửi rất gắt :<.
 
-![][view-out-of-money]
+![view-out-of-money]
 
 Mua xong, thử qua trang `Cart`, thấy có chức năng bán, bán hết thì tiền của ta lại về như ban đầu.
 
-![][view-cart]
+![view-cart]
 
 Vậy cơ bản mục tiêu của bài này là mua bán làm sao để biến balance từ 60 củ thành 100 củ để mua flag.
 
 Soi lại trong source, thấy câu chửi lúc nãy nằm trong `ShopController.php`.
 
-![][view-shop-controller-src]
+![view-shop-controller-src]
 
 Để ý chút thì ta thấy hàm `buyItem` rất có vấn đề, khi mà check xem user có đủ tiền không bằng `$user->money >= $item->price`, sau đó đưa luôn item vào giỏ hàng của user bằng lệnh `$con->queryUpdate("insert into user_items(user_id, item_id) values(?, ?)", [$user->id, $item->id])`, rồi mới trừ tiền user bằng `$user->money -= $item->price`.
 
@@ -49,7 +49,7 @@ Soi lại trong source, thấy câu chửi lúc nãy nằm trong `ShopController
 
 Soi thêm hàm `sellItem` trong `CartController.php`, cũng thấy có vấn đề tương tự, tuy nhiên ở đây tiền lại được cộng trước khi sản phẩm bị xoá khỏi giỏ hàng, chứng tỏ đây là dụng ý của người ra đề.
 
-![][view-cart-controller-src]
+![view-cart-controller-src]
 
 Sau khi biết hướng đi rồi, cộng với việc biết Javascript chạy bất đồng bộ và có tốc độ request khá là ổn, nên mình viết ngay một payload thế này để chạy trên browser console
 
@@ -78,11 +78,11 @@ Vì là `Race condition` nên mình nghĩ đôi khi nó trigger một cách hên
 
 Sau vài lần chạy payload thì cuối cùng mình đã tích đủ thận để bán đi mua flag rùi :3
 
-![][view-exploited]
+![view-exploited]
 
 Thực ra khi làm bài này thì mình không phân tích nhiều như thế mà nhảy vào spam requests luôn, thành ra mình phát hiện ra cách làm trước cả khi đọc source. Tuy nhiên mình vẫn muốn phân tích đầy đủ theo cách tư duy của mình để mọi người có thể hiểu một cách dễ dàng mạch lạc nhất :D.
 ### Flag
-![][flag]
+![flag]
 ```
 flag{Rac3_c0nditi0n__help_y0u}
 ```

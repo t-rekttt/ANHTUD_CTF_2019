@@ -12,12 +12,12 @@ Challenge Oreo sẽ được mở khi bạn giải được bài này
 
 ### Giao diện của bài:
 
-![][view]
+![view]
 
 ### Lời giải
 Tạo 1 tài khoản, đăng nhập thử:
 
-![][logged-in]
+![logged-in]
 
 ```
 Bạn có biết khác biệt giữa bạn và admin là gì không?
@@ -257,7 +257,7 @@ Trong khi đọc hiểu và phân tích tính năng thì mình thấy trong sour
 Từ đó mình nghĩ ra cách làm bài này là làm sao dùng tính năng đăng ký và path traversal để ghi đè password của mình lên password của admin. Sau đó đăng nhập vào lấy flag.
 Nghĩ tí là ra ngay payload `....//users/admin` thôi. Các bạn xem đoạn code test này của mình cho dễ hiểu
 
-![][test-code]
+![test-code]
 
 <details>
   <summary>Test code</summary> 
@@ -304,7 +304,7 @@ Nghĩ tí là ra ngay payload `....//users/admin` thôi. Các bạn xem đoạn 
 </details>
 
 ### Flag:
-![][flag]
+![flag]
 ```
 flag{you_cant_have_sql_injection_if_you_dont_use_sql}
 ```

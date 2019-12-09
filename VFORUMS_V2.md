@@ -12,7 +12,7 @@ Bài này thì mình thấy khá là nghệ thuật, biết được đâm vào 
 
 Nhiều bài chỉ có mỗi trang login thế này trông hơi bùn, nhưng biết làm sao
 
-![][view-login]
+![view-login]
 
 ### Lời giải
 
@@ -20,19 +20,19 @@ Như thường lệ, mình vẫn tạo tài khoản, đăng nhập thử và đi
 
 Thì thấy khi update `Name` ở đây
 
-![][view-update-info]
+![view-update-info]
 
 Thì bên `Logs` sẽ có thêm một dòng như này
 
-![][view-logs]
+![view-logs]
 
 Thử update đổi `Name` thành `<??>`, thấy name trong `Logs` biến mất, biết ngay là nó thực thi đoạn php đó rồi 
 
-![][view-injected]
+![[view-injected]
 
 Tuy nhiên khi mình thử update `Name` thành một đoạn php dài hơn thì bị báo chỉ được sử dụng 10 chars thôi :'(
 
-![][view-10-chars]
+![view-10-chars]
 
 Vậy mục tiêu ở đây là phải viết được cái command làm sao để RCE được nhưng vẫn tuân thủ điều kiện 10 chars của bài
 
@@ -40,7 +40,7 @@ Sau khi lục lọi trên mạng một lúc thì mình tìm được 2 shorthand
 
 Thử lệnh `<?=`ls`?>` (10 chars) ta được kết quả
 
-![][view-ls]
+![view-ls]
 
 Sau đó, vì nhận thấy rằng phép gán biến, ví dụ `<?$a="b"?>` hết 10 chars, phép nối biến, ví dụ `<?$a.=$b?>` hết 10 chars, kèm thêm lệnh exec, ví dụ `` <?`{$a}`?> ``, cũng hết 10 chars,
  nên 3 lệnh này đều có thể sử dụng làm bàn đạp để RCE.
@@ -87,13 +87,13 @@ for c in r:
 
 Kết quả, vì mình chạy update với mỗi kí tự trong payload nên sẽ có một đoạn log dài ngoằng như kia, dòng cuối cùng là payload đã nối lại, được mình echo ra, cho biết payload đã chạy thành công
 
-![][view-executed]
+![view-executed]
 
 Việc còn lại là bới RequestBin tìm flag thôi :3
 
 ### Flag
 
-![][flag]
+![flag]
 
 ```
 flag{0nly_10_ch4r_(T__T)}
