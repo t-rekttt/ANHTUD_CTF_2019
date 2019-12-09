@@ -4,15 +4,15 @@
 Vì phấn khích khi là người đầu tiên giải được `No SQL Injection` và mở được bài này, nên mình quyết tâm đâm luôn
 
 ### Đề bài:
-```
+<pre>
 Thôi còn chi nữa mà mong
 
-http://oreo.ctf2019.yeuchimse.com
+<a href="http://oreo.ctf2019.yeuchimse.com">http://oreo.ctf2019.yeuchimse.com</a>
 
 Challenge FA sẽ được mở khi bạn giải được bài này
 
 Cập nhật 09:07 15/11/2019: Điểm số tăng từ 200 lên 250, điểm mua hint tăng từ 50 lên 100.
-```
+</pre>
 
 ### Giao diện của bài:
 
